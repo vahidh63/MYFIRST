@@ -2,32 +2,15 @@ pipeline {
     agent any
     
     stages {
-        stage('Build') {
+        stage('Ok') {
             steps {
-                 timeout(45) {
-                wrap([$class: 'AnsiColorBuildWrapper', 'colorMapName': 'XTerm']) {
-                    echo 'something that outputs ansi colored stuff'
-                }
-            }
+                echo "Ok"
             }
         }
-        stage('Test') {
-            steps {
-                ansiColor('xterm') {
-                    echo "TERM=${env.TERM}"
-                    // prints out TERM=xterm
-                }
-                echo 'Testing..'
-                echo 'Testinglllllllllll..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                ansiColor('xterm') {
-                echo 'something that outputs ansi colored stuff'
-                }
-                echo 'Deploying....'
-            }
+    }
+    post {
+        always {
+            emailext body: 'A Test EMail', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Test'
         }
     }
 }
