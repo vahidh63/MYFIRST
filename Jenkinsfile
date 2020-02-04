@@ -6,7 +6,7 @@ pipeline {
             steps {
                  timeout(45) {
                 wrap([$class: 'AnsiColorBuildWrapper', 'colorMapName': 'XTerm']) {
-                    sh 'something that outputs ansi colored stuff'
+                    echo 'something that outputs ansi colored stuff'
                 }
             }
             }
