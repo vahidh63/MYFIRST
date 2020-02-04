@@ -15,6 +15,10 @@ pipeline {
         }
         stage('Test') {
             steps {
+                ansiColor('xterm') {
+                    echo "TERM=${env.TERM}"
+                    // prints out TERM=xterm
+                }
                 echo 'Testing..'
                 echo 'Testinglllllllllll..'
             }
