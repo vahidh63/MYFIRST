@@ -1,12 +1,12 @@
 pipeline {
     agent any
-
+    wrap([$class: 'AnsiColorBuildWrapper', 'colorMapName': 'XTerm']) {
+                    sh 'something that outputs ansi colored stuff'
+                }
     stages {
         stage('Build') {
             steps {
-                wrap([$class: 'AnsiColorBuildWrapper', 'colorMapName': 'XTerm']) {
-                    sh 'something that outputs ansi colored stuff'
-                }
+                
                 
                 echo 'Building..'
             }
