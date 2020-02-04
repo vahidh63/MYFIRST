@@ -4,6 +4,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                wrap([$class: 'AnsiColorBuildWrapper', 'colorMapName': 'XTerm']) {
+                    sh 'something that outputs ansi colored stuff'
+                }
                 ansiColor('xterm') {
                 echo 'something that outputs ansi colored stuff'
                 }
