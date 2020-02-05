@@ -11,10 +11,10 @@ pipeline {
          always {  
              echo 'This will always run'  
              emailext body: 'Check console output at $BUILD_URL to view the results.$BUILD_NUMBER'
-             +'PROJECT_NAME : $PROJECT_NAME'+'/n'
-             +'Detail : Project Name' +'/n'
-             +'BUILD_NUMBER : $BUILD_NUMBER'+'/n'
-             +'Detail : The current build number'+'/n',
+             +'PROJECT_NAME : $PROJECT_NAME /n'
+             +'Detail : Project Name /n'
+             +'BUILD_NUMBER : $BUILD_NUMBER /n'
+             +'Detail : The current build number/n',
             to: "vahid.h63@gmail.com", 
             subject: 'Jenkins build is back to normal: $PROJECT_NAME - $BUILD_NUMBER'
          }  
