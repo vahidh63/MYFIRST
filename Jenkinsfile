@@ -14,29 +14,29 @@ pipeline {
              +'PROJECT_NAME : #$PROJECT_NAME'+'/n'+
              +'Detail : Project Name' +'/n'+
              +'BUILD_NUMBER : #$BUILD_NUMBER'+'/n'+
-             +'Detail : The current build number'+'/n'+
-             +'BRANCH_NAME : #$BRANCH_NAME'+'/n'+ 
-             +'Detail : For a multibranch project, this will be set to the name of the branch being built, for example in case you wish to deploy to production from master but not from feature branches; if corresponding to some kind of change request, the name is generally arbitrary (refer to CHANGE_ID and CHANGE_TARGET).'+'/n'+
-             +'CHANGE_ID : #$CHANGE_ID'+'/n'+
-             +'Detail : For a multibranch project corresponding to some kind of change request, this will be set to the change ID, such as a pull request number, if supported; else unset.'+'/n'+
-             +'CHANGE_URL : #$CHANGE_URL'+'/n'+
-             +'Detali : For a multibranch project corresponding to some kind of change request, this will be set to the change URL, if supported; else unset.'+'/n'+
-             +'CHANGE_TITLE : #$CHANGE_TITLE'+'/n'+
-             +'Detail : For a multibranch project corresponding to some kind of change request, this will be set to the title of the change, if supported; else unset.'+'/n'+
-             +'CHANGE_AUTHOR : #$CHANGE_AUTHOR'+'/n'+
-             +'Detail : For a multibranch project corresponding to some kind of change request, this will be set to the username of the author of the proposed change, if supported; else unset.'+'/n'+
-             +'CHANGE_AUTHOR_DISPLAY_NAME : #$CHANGE_AUTHOR_DISPLAY_NAME'+'/n'+
-             +'Detail :For a multibranch project corresponding to some kind of change request, this will be set to the human name of the author, if supported; else unset.'+'/n'+
-             +'CHANGE_AUTHOR_EMAIL : #$CHANGE_AUTHOR_EMAIL'+'/n'+
-             +'Detail : For a multibranch project corresponding to some kind of change request, this will be set to the email address of the author, if supported; else unset.'+'/n'+
-             +'CHANGE_TARGET : #$CHANGE_TARGET'+'/n'+
-             +'Detail : For a multibranch project corresponding to some kind of change request, this will be set to the target or base branch to which the change could be merged, if supported; else unset.'+'/n'+
-             +'CHANGE_BRANCH : #$CHANGE_BRANCH'+'/n'+
-             +'Detail : For a multibranch project corresponding to some kind of change request, this will be set to the name of the actual head on the source control system which may or may not be different from BRANCH_NAME. For example in GitHub or Bitbucket this would have the name of the origin branch whereas BRANCH_NAME would be something like PR-24.'+'/n'+
-             +'CHANGE_FORK : #$CHANGE_FORK'+'/n'+
-             +'Detail : For a multibranch project corresponding to some kind of change request, this will be set to the name of the forked repo if the change originates from one; else unset.'+'/n'+
-             +'BUILD_ID : #$BUILD_ID'+'/n'+
-             +'The current build ID, identical to BUILD_NUMBER for builds created in 1.597+, but a YYYY-MM-DD_hh-mm-ss timestamp for older builds',
+             +'Detail : The current build number'+'/n',
+            //  +'BRANCH_NAME : #$BRANCH_NAME'+'/n'+ 
+            //  +'Detail : For a multibranch project, this will be set to the name of the branch being built, for example in case you wish to deploy to production from master but not from feature branches; if corresponding to some kind of change request, the name is generally arbitrary (refer to CHANGE_ID and CHANGE_TARGET).'+'/n'+
+            //  +'CHANGE_ID : #$CHANGE_ID'+'/n'+
+            //  +'Detail : For a multibranch project corresponding to some kind of change request, this will be set to the change ID, such as a pull request number, if supported; else unset.'+'/n'+
+            //  +'CHANGE_URL : #$CHANGE_URL'+'/n'+
+            //  +'Detali : For a multibranch project corresponding to some kind of change request, this will be set to the change URL, if supported; else unset.'+'/n'+
+            //  +'CHANGE_TITLE : #$CHANGE_TITLE'+'/n'+
+            //  +'Detail : For a multibranch project corresponding to some kind of change request, this will be set to the title of the change, if supported; else unset.'+'/n'+
+            //  +'CHANGE_AUTHOR : #$CHANGE_AUTHOR'+'/n'+
+            //  +'Detail : For a multibranch project corresponding to some kind of change request, this will be set to the username of the author of the proposed change, if supported; else unset.'+'/n'+
+            //  +'CHANGE_AUTHOR_DISPLAY_NAME : #$CHANGE_AUTHOR_DISPLAY_NAME'+'/n'+
+            //  +'Detail :For a multibranch project corresponding to some kind of change request, this will be set to the human name of the author, if supported; else unset.'+'/n'+
+            //  +'CHANGE_AUTHOR_EMAIL : #$CHANGE_AUTHOR_EMAIL'+'/n'+
+            //  +'Detail : For a multibranch project corresponding to some kind of change request, this will be set to the email address of the author, if supported; else unset.'+'/n'+
+            //  +'CHANGE_TARGET : #$CHANGE_TARGET'+'/n'+
+            //  +'Detail : For a multibranch project corresponding to some kind of change request, this will be set to the target or base branch to which the change could be merged, if supported; else unset.'+'/n'+
+            //  +'CHANGE_BRANCH : #$CHANGE_BRANCH'+'/n'+
+            //  +'Detail : For a multibranch project corresponding to some kind of change request, this will be set to the name of the actual head on the source control system which may or may not be different from BRANCH_NAME. For example in GitHub or Bitbucket this would have the name of the origin branch whereas BRANCH_NAME would be something like PR-24.'+'/n'+
+            //  +'CHANGE_FORK : #$CHANGE_FORK'+'/n'+
+            //  +'Detail : For a multibranch project corresponding to some kind of change request, this will be set to the name of the forked repo if the change originates from one; else unset.'+'/n'+
+            //  +'BUILD_ID : #$BUILD_ID'+'/n'+
+            //  +'The current build ID, identical to BUILD_NUMBER for builds created in 1.597+, but a YYYY-MM-DD_hh-mm-ss timestamp for older builds',
 
              
 //            BUILD_DISPLAY_NAME
