@@ -1,3 +1,8 @@
+def MESSAGE_DETAILS = "BUILD DETAILS:  - ${BUILD_URL} "
++"Project name : ${env.PROJECT_NAME} </br>"
++"Job Name : ${env.JOB_NAME} </br>"
++"Build Number : #${env.BUILD_NUMBER} </br>"
+
 pipeline {  
      agent any  
      stages {  
@@ -10,11 +15,7 @@ pipeline {
      post {  
          always {  
              echo 'This will always run'  
-             emailext body: 'Check console output at $BUILD_URL to view the results.$BUILD_NUMBER'
-             +'PROJECT_NAME : $PROJECT_NAME /n'
-             +'Detail : Project Name /n'
-             +'BUILD_NUMBER : $BUILD_NUMBER /n'
-             +'Detail : The current build number/n',
+             emailext body: 'Check console output at $BUILD_URL to view the results.</br>MESSAGE_DETAILS,
             to: "vahid.h63@gmail.com", 
             subject: 'Jenkins build is back to normal: $PROJECT_NAME - $BUILD_NUMBER'
          }  
