@@ -12,7 +12,7 @@ pipeline {
      post {  
          always {  
              echo 'This will always run'  
-             emailext body: 'Check console output at $BUILD_URL to view the results.</br>MESSAGE_DETAILS',
+             emailext body: 'Check console output at $BUILD_URL to view the results.</br>'+ MESSAGE_DETAILS,
             to: "vahid.h63@gmail.com", 
             subject: 'Jenkins build is back to normal: $PROJECT_NAME - $BUILD_NUMBER'
          }  
