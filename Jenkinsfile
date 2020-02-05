@@ -31,7 +31,7 @@ def MESSAGE_DETAILS = "BUILD DETAILS:  - ${BUILD_URL} \n"+
 "GIT_COMMITTER_EMAIL : ${env.GIT_COMMITTER_EMAIL} \n" + 
 "GIT_AUTHOR_NAME : ${env.GIT_AUTHOR_NAME} \n" + 
 "GIT_AUTHOR_EMAIL : ${env.GIT_AUTHOR_EMAIL} \n" + 
-"GIT_URL : ${env.GIT_URL} \n" + 
+"GIT_URL : ${env.GIT_URL} \n"
 
 pipeline {  
      agent any  
