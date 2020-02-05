@@ -1,4 +1,4 @@
-def MESSAGE_DETAILS = "BUILD DETAILS:  - ${BUILD_URL} Project name : ${env.PROJECT_NAME} </br>Job Name : ${env.JOB_NAME} </br>"Build Number : #${env.BUILD_NUMBER} </br>"
+def MESSAGE_DETAILS = "BUILD DETAILS:  - ${BUILD_URL} Project name : ${env.PROJECT_NAME} </br>Job Name : ${env.JOB_NAME} </br>Build Number : #${env.BUILD_NUMBER} </br>"
 
 pipeline {  
      agent any  
