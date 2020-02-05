@@ -1,7 +1,7 @@
-def MESSAGE_DETAILS = "BUILD DETAILS:  - ${BUILD_URL} \n"+
+def MESSAGE_DETAILS = "BUILD DETAILS:  - ${BUILD_URL} <br></br>\n"+
 "Project name : ${env.PROJECT_NAME} \n"+
-"Job Name : ${env.JOB_NAME} \n"+
-"Build Number : ${env.BUILD_NUMBER} \n" + 
+"Job Name : ${env.JOB_NAME} <br></br>\n"+
+"Build Number : ${env.BUILD_NUMBER} <br></br>\n" + 
 "CHANGE_ID : ${env.CHANGE_ID} \n" + 
 "BRANCH_NAME : ${env.BRANCH_NAME} \n" + 
 "CHANGE_URL : ${env.CHANGE_URL} \n" + 
