@@ -10,15 +10,15 @@ pipeline {
      post {  
          always {  
              echo 'This will always run'  
-             emailext body: 'Check console output at $BUILD_URL to view the results.${env.BUILD_NUMBER}', 
+             emailext body: 'Check console output at $BUILD_URL to view the results.#$BUILD_NUMBER', 
                     to: "vahid.h63@gmail.com", 
                     subject: 'Jenkins build is back to normal: $PROJECT_NAME - #$BUILD_NUMBER'
          }  
          success {  
              echo 'This will run only if successful'  
-            emailext body: 'Check console output at $BUILD_URL to view the results.${env.BUILD_NUMBER}', 
+            emailext body: 'Check console output at $BUILD_URL to view the results.#$BUILD_NUMBER', 
                     to: "vahid.h63@gmail.com", 
-                    subject: 'Jenkins build is back to normal: $PROJECT_NAME - ${env.BUILD_NUMBER}'
+                    subject: 'Jenkins build is back to normal: $PROJECT_NAME - #$BUILD_NUMBER'
          }  
          failure {  
              mail bcc: '', body: "<b>Example</b><br>Project: ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER} <br> URL de build: ${env.BUILD_URL}", cc: '', charset: 'UTF-8', from: '', mimeType: 'text/html', replyTo: '', subject: "ERROR CI: Project name -> ${env.JOB_NAME}", to: "vahid.h63@gmail.com";  
