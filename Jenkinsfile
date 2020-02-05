@@ -15,9 +15,11 @@ pipeline {
      post {  
          always {  
              echo 'This will always run'  
-             emailext body: 'Check console output at $BUILD_URL to view the results.<br>'+MESSAGE_DETAILS,
+              emailext attachLog: false, body: "Build Finished Successfully.<br></br>" + MESSAGE_DETAILS, mimeType: 'text/html', subject: "${env.JOB_NAME} - Build # ${env.BUILD_NUMBER} - SUCCESS", to: "vahid.h63@gmail.com"
+              office365ConnectorSend color: '05b222', status: 'SUCCESS', webhookUrl: '${TEAM_WEBHOOK}'
+             emailext body: MESSAGE_DETAILS,
             to: "vahid.h63@gmail.com", 
-            subject: 'Jenkins build is back to normal: $PROJECT_NAME - $BUILD_NUMBER'
+            subject: 'Jenkins build : $PROJECT_NAME - $BUILD_NUMBER'
          }  
          success {  
              echo 'This will run only if successful'
